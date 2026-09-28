@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="vi"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<head>
+    <title>Trang chủ</title>
+</head>
+<body>
+<main layout:fragment="content">
+    <div class="panel">
+        <h1>Trang chủ UTEShop</h1>
+        <p>Xin chào <strong th:text="${#authentication.principal.fullName}">User</strong></p>
+        <p>Email: <span th:text="${#authentication.principal.email}"></span></p>
+        <p>Role: <span th:text="${#authentication.principal.role}" class="btn small secondary"></span></p>
+    </div>
+</main>
+</body>
+</html>
